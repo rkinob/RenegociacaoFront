@@ -9,9 +9,23 @@ progress {
   width: 176vh;
 
 }
+
+@media screen and (max-width: 1280px) {
+  progress{
+     width: 135vh;
+  }
+}
+
+
 @media screen and (max-width: 1000px) {
   progress{
      width: 64vh;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  progress{
+     width: 56vh;
   }
 }
 
@@ -21,6 +35,9 @@ progress {
      overflow: hidden;
   }
 }
+
+
+
 
 .progressbartext {
   text-align: justify; margin-left:6vh; font-size:smaller;
