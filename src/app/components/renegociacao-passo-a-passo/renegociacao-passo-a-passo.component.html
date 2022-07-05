@@ -1,0 +1,30 @@
+<div class="container-fluid"  id="grad1">
+  <div class="row justify-content-center mt-0">
+      <div class="col-11  text-center p-0 mt-3 mb-2">
+          <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+              <h4><strong>Renegociação de Dívidas</strong></h4>
+
+              <div class="row">
+                  <div class="col-md-12 mx-0">
+                      <!-- progressbar -->
+                      <div class="form-card">
+                        <div id="progressbar" class="row">
+                          <div class="col-md-6">
+                            <div class="progressbartext"> {{ textoPasso }}
+                            <BR>
+                              <progress    max="100" [value]="passoNumero * valorPasso"></progress>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <app-informar-cpf    [exibirPagina]="passoNumero == 1" (numerodoPasso)="setNumeroPasso($event)"></app-informar-cpf>
+                    <app-confirmar-dados [exibirPagina]="passoNumero == 2" (numerodoPasso)="setNumeroPasso($event)"></app-confirmar-dados>
+                    <app-selecionar-contratos [exibirPagina]="passoNumero == 3" (numerodoPasso)="setNumeroPasso($event)"></app-selecionar-contratos>
+                    <app-selecionar-oferta [exibirPagina]="passoNumero == 4" (numerodoPasso)="setNumeroPasso($event)"></app-selecionar-oferta>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
