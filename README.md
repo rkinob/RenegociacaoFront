@@ -4,8 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Instalar dependências abaixo
  npm install  
+
  npm install @angular/animations@latest --save
+
  npm i ngx-spinner
+
  npm i @ng-bootstrap/ng-bootstrap
 
 
