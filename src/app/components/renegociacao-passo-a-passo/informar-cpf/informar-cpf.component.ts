@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Cliente } from 'src/app/models/cliente';
 import { RenegociacaoService } from 'src/app/services/renegociacao.service';
+import { OnlyNumbers } from 'src/app/utils/only-numbers';
 import { maskCPF, Validacoes } from 'src/app/utils/valicacoes';
 import Swal from 'sweetalert2';
 @Component({
@@ -17,11 +18,18 @@ export class InformarCpfComponent implements OnInit {
   public mensagem = Swal;
   constructor(private _fb: FormBuilder, public renegociacaoService: RenegociacaoService, public spinner: NgxSpinnerService) { }
 
+
+
+
   public formCpf = this._fb.group({
                     Cpf: ['', [Validators.required, Validacoes.ValidaCpf]],
                     });
 
   public Cpf = this.formCpf.controls.Cpf;
+
+  public somenteNumeros(event: any): void {
+    OnlyNumbers.keyPressNumbers(event);
+  }
 
   ngOnInit(): void {
     this.renegociacaoService.limparDados.subscribe({
