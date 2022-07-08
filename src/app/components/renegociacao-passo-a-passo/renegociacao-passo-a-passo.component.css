@@ -6,36 +6,39 @@ label {
 
 progress {
   height: 20px;
-  width: 176vh;
+  width: 86vw;
 
 }
 
+@media screen and (max-width: 500px) {
+  progress{
+     width: 84vw;
+     overflow: hidden;
+  }
+}
+
+/*
 @media screen and (max-width: 1280px) {
   progress{
-     width: 135vh;
+     width: 135vw;
   }
 }
 
 
 @media screen and (max-width: 1000px) {
   progress{
-     width: 64vh;
+     width: 64vw;
   }
 }
 
 @media screen and (max-width: 912px) {
   progress{
-     width: 56vh;
+     width: 56vw;
   }
 }
 
-@media screen and (max-width: 500px) {
-  progress{
-     width: 38vh;
-     overflow: hidden;
-  }
-}
 
+*/
 
 
 
